@@ -1,44 +1,45 @@
 @font-face {
-    font-family: 'Oswald Light';
+    font-family: 'Oswald';
     src:
         url('fonts/Oswald-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Oswald Regular';
+    font-family: 'Oswald';
     src:
         url('fonts/Oswald-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mulish Regular';
+    font-family: 'Mulish';
     src:
         url('fonts/Mulish-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mulish Medium';
+    font-family: 'Mulish';
     src:
         url('fonts/Mulish-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mulish Italic';
+    font-family: 'Mulish';
     src:
         url('fonts/Mulish-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
     font-display: wrap;
 }
+
