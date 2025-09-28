@@ -1,45 +1,296 @@
 @font-face {
-    font-family: 'Oswald';
-    src:
-        url('fonts/Oswald-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Oswald";
+  src: url("fonts/Oswald-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src:
-        url('fonts/Oswald-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Oswald";
+  src: url("fonts/Oswald-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mulish';
-    src:
-        url('fonts/Mulish-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Mulish";
+  src: url("fonts/Mulish-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mulish';
-    src:
-        url('fonts/Mulish-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Mulish";
+  src: url("fonts/Mulish-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mulish';
-    src:
-        url('fonts/Mulish-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: wrap;
+  font-family: "Mulish";
+  src: url("fonts/Mulish-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --main-color: #222222;
+  --secondary-color: #ffffff;
+  --main-font-family: "Mulish", Arial, sans-serif;
+  --secondary-font-family: "Oswald", Arial, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Mulish", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: var(--main-color);
+  color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.header {
+  background-color: var(--main-color);
+  padding: 20px 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.nav__item {
+  font-family: var(--secondary-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: 20px 1fr 220px 280px;
+  gap: 40px;
+}
+
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.sidebar__award {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-bottom: 12px;
+}
+
+.sidebar__year {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 12px;
+}
+
+.sidebar__line {
+  flex: 1;
+  width: 1px;
+  background-color: var(--secondary-color);
+}
+
+.hero__info {
+  padding-top: 100px;
+  padding-left: 22px;
+}
+
+.hero__stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 315px;
+  margin-bottom: 40px;
+  padding-left: 25px;
+}
+
+.hero__stat-number {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--secondary-font-family);
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1.125;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.hero__stat-number::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  bottom: 26px;
+  left: -26px;
+  background-color: var(--secondary-color);
+}
+
+.hero__stat-number::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  bottom: 26px;
+  left: -26px;
+  transform: rotate(90deg);
+  background-color: var(--secondary-color);
+}
+
+.hero__stat-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main-title {
+  font-family: var(--secondary-font-family);
+  font-weight: 300;
+  font-size: 116px;
+  line-height: 1.13793;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin-bottom: 40px;
+}
+
+.hero__subtitle {
+  margin-bottom: 160px;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.scroll-down {
+  position: relative;
+}
+
+.scroll-down::after {
+  content: url("icons/arrow-down.svg");
+  position: absolute;
+  top: 0;
+  right: -30px;
+}
+
+.hero__media {
+  display: grid;
+  place-items: center;
+}
+
+.hero__media img {
+  width: 220px;
+  height: 220px;
+}
+
+.hero__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero__about-text {
+  align-self: flex-end;
+  width: 220px;
+  text-align: right;
+}
+
+.about {
+  background-color: var(--secondary-color);
 }
 
