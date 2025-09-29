@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="modern-normalize.min.css" />
+    <link rel="stylesheet" href="modern-normalize.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Vera's portfolio</title>
   </head>
@@ -22,54 +22,66 @@
             <a href="#" class="nav__item">Faq</a>
             <a href="#" class="nav__item">Contacts</a>
           </nav>
+          <div class="hamburger"><span></span> <span></span></div>
         </div>
       </div>
     </header>
     <main>
       <section class="hero section">
         <div class="container">
-          <div class="hero__content">
+          <div class="hero__wrapper">
             <div class="hero__sidebar sidebar">
               <div class="sidebar__award">Best Photographer by MAX</div>
               <div class="sidebar__line"></div>
               <div class="sidebar__year">2025</div>
             </div>
-            <div class="hero__info">
-              <div class="hero__stats">
-                <div class="hero__stat">
-                  <span class="hero__stat-number">487</span>
-                  <span class="hero__stat-label">Photo sessions</span>
+            <div class="hero__content">
+              <div class="hero__info">
+                <div class="hero__stats">
+                  <div class="hero__stat">
+                    <span class="hero__stat-number">487</span>
+                    <span class="hero__stat-label">Photo sessions</span>
+                  </div>
+                  <div class="hero__stat">
+                    <span class="hero__stat-number">356</span>
+                    <span class="hero__stat-label">Satisfied clients</span>
+                  </div>
                 </div>
-                <div class="hero__stat">
-                  <span class="hero__stat-number">356</span>
-                  <span class="hero__stat-label">Satisfied clients</span>
-                </div>
+                <h1 class="hero__title main-title">
+                  Professional photographer
+                </h1>
+                <p class="hero__subtitle">
+                  Capture the Moment. Tell Your Story.
+                </p>
+                <a href="#" class="hero__scroll-down scroll-down"
+                  >Scroll down</a
+                >
               </div>
-              <h1 class="hero__title main-title">Professional photographer</h1>
-              <p class="hero__subtitle">Capture the Moment. Tell Your Story.</p>
-              <a href="#" class="hero__scroll-down scroll-down">Scroll down</a>
-            </div>
-            <div class="hero__media">
-              <img
-                src="image/webp/img-10.webp"
-                alt="The model in front of the mountains."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="hero__aside">
-              <img
-                src="image/webp/img-11.webp"
-                alt="The model is looking down from above."
-                width="3000"
-                height="4000"
-              />
-              <div class="hero__about-text">
-                Hi! I’m Vera, a photographer. For me, photography is more than
-                just an image.
+              <div class="hero__images">
+                <div class="hero__media">
+                  <img
+                    src="image/webp/img-10.webp"
+                    alt="The model in front of the mountains."
+                    width="220"
+                    height="220"
+                  />
+                </div>
+                <div class="hero__aside">
+                  <img
+                    src="image/webp/img-11.webp"
+                    alt="The model is looking down from above."
+                    width="280"
+                    height="374"
+                  />
+                  <div class="hero__about-text">
+                    Hi! I’m Vera, a photographer. For me, photography is more
+                    than just an image.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="hero__footer"></div>
         </div>
       </section>
       <section class="about section">
@@ -79,15 +91,15 @@
               <img
                 src="image/webp/img-photographer-1.webp"
                 alt="Vera's sitting on an armchair."
-                width="3000"
-                height="4000"
+                width="728"
+                height="728"
               />
               <h2 class="about__title section-title section-title--dark">
                 About me
               </h2>
               <p class="about__text">
                 Hi! I’m Vera, a photographer with 5 years of experience. For me,
-                photography is more than just an image. It’s a way to<br />feel
+                photography is more than just an image. It’s a way to feel
                 the moment, capture the atmosphere, and freeze time. I work with
                 people, stories, and emotions.
               </p>
@@ -102,16 +114,16 @@
               <img
                 src="image/webp/img-photographer-2.webp"
                 alt="Vera's looking down."
-                width="3000"
-                height="4000"
+                width="728"
+                height="728"
               />
             </div>
             <div class="about__block about__block--philosophy">
               <img
                 src="image/webp/img-photographer-3.webp"
                 alt="Vera's looking into the distance."
-                width="3000"
-                height="4000"
+                width="728"
+                height="728"
               />
               <p class="about__text about__text--right">
                 Seeing with heart. Shooting with soul.
@@ -128,103 +140,105 @@
             family sessions, and more.
           </p>
         </div>
-        <div class="portfolio__collage slider">
-          <div class="slider__list">
-            <div class="slider__item slider__item--first">
-              <img
-                src="image/webp/img-14.webp"
-                alt="Couple is walking by the sea at sunset."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--second">
-              <img
-                src="image/webp/img-21.webp"
-                alt="Black and white portrait of a couple, woman is kissing man."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--third">
-              <img
-                src="image/webp/img-22.webp"
-                alt="Woman is riding a horse in the mountains."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--fourth">
-              <img
-                src="image/webp/img-20.webp"
-                alt="Woman is hugging a man."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--fifth">
-              <img
-                src="image/webp/img-17.webp"
-                alt="Two women are standing on a balcony with old town buildings in the background."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--sixth">
-              <img
-                src="image/webp/img-1.webp"
-                alt="Black and white photo of a couple sitting on a stone, man is hugging the woman."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--seventh">
-              <img
-                src="image/webp/img-2.webp"
-                alt="Black and white photo of a couple standing in front of a building."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--eighth">
-              <img
-                src="image/webp/img-5.webp"
-                alt="Close-up of a couple holding hands."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--ninth">
-              <img
-                src="image/webp/img-7.webp"
-                alt="Couple dancing in a field."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--tenth">
-              <img
-                src="image/webp/img-8.webp"
-                alt="Black and white photo of a woman in a dress holding a man's hand."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--eleventh">
-              <img
-                src="image/webp/img-9.webp"
-                alt="Black and white photo of a man embracing a woman from behind, his arm around her neck."
-                width="3000"
-                height="4000"
-              />
-            </div>
-            <div class="slider__item slider__item--twelfth">
-              <img
-                src="image/webp/img-12.webp"
-                alt="A woman and a man looking at each other with the sea in the background."
-                width="3000"
-                height="4000"
-              />
+        <div class="slider__wrapper">
+          <div class="portfolio__collage slider">
+            <div class="slider__list">
+              <div class="slider__item slider__item--first">
+                <img
+                  src="image/webp/img-14.webp"
+                  alt="Couple is walking by the sea at sunset."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--second">
+                <img
+                  src="image/webp/img-21.webp"
+                  alt="Black and white portrait of a couple, woman is kissing man."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--third">
+                <img
+                  src="image/webp/img-22.webp"
+                  alt="Woman is riding a horse in the mountains."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--fourth">
+                <img
+                  src="image/webp/img-20.webp"
+                  alt="Woman is hugging a man."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--fifth">
+                <img
+                  src="image/webp/img-17.webp"
+                  alt="Two women are standing on a balcony with old town buildings in the background."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--sixth">
+                <img
+                  src="image/webp/img-1.webp"
+                  alt="Black and white photo of a couple sitting on a stone, man is hugging the woman."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--seventh">
+                <img
+                  src="image/webp/img-2.webp"
+                  alt="Black and white photo of a couple standing in front of a building."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--eighth">
+                <img
+                  src="image/webp/img-5.webp"
+                  alt="Close-up of a couple holding hands."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--ninth">
+                <img
+                  src="image/webp/img-7.webp"
+                  alt="Couple dancing in a field."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--tenth">
+                <img
+                  src="image/webp/img-8.webp"
+                  alt="Black and white photo of a woman in a dress holding a man's hand."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--eleventh">
+                <img
+                  src="image/webp/img-9.webp"
+                  alt="Black and white photo of a man embracing a woman from behind, his arm around her neck."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
+              <div class="slider__item slider__item--twelfth">
+                <img
+                  src="image/webp/img-12.webp"
+                  alt="A woman and a man looking at each other with the sea in the background."
+                  width="3000"
+                  height="4000"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -365,7 +379,7 @@
                 <div class="accordion__content">
                   Super simple – just message me through any convenient platform
                   (Instagram, Telegram, WhatsApp, or the contact form on this
-                  site). We’ll discuss your preferred date, city, and<br />session
+                  site). We’ll discuss your preferred date, city, and session
                   type. Once confirmed, I’ll reserve the date for you and send
                   over preparation tips.
                 </div>
