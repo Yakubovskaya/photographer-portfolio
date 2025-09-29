@@ -67,6 +67,7 @@ body {
 
 html {
   font-size: 1rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -151,10 +152,7 @@ button {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-.nav__item:hover {
-  color: var(--hover-color);
+  transition: color 0.3s ease;
 }
 
 .hamburger {
@@ -223,7 +221,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 315px;
+  width: 340px;
   margin-bottom: 40px;
   padding-left: 25px;
 }
@@ -291,6 +289,7 @@ button {
 
 .scroll-down {
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .scroll-down::after {
@@ -303,10 +302,6 @@ button {
   height: 20px;
   mask: url("../portfolio/icons/arrow-down.svg") center / contain no-repeat;
   background-color: currentColor;
-}
-
-.scroll-down:hover {
-  color: var(--hover-color);
 }
 
 .hero__media {
@@ -389,7 +384,7 @@ button {
 }
 
 .portfolio__subtitle {
-  width: 360px;
+  max-width: 360px;
 }
 
 .slider__wrapper {
@@ -404,14 +399,13 @@ button {
   width: 1440px;
   height: 654px;
   margin-top: 40px;
-  overflow: hidden;
 }
 
 .slider__list {
   display: flex;
   align-items: center;
   gap: 20px;
-  transform: translateX(-1200px);
+  transform: translateX(-1220px);
   height: 100%;
 }
 
@@ -461,12 +455,6 @@ button {
   height: 374px;
 }
 
-@media (min-width: 1441px) {
-  .slider {
-    overflow: visible;
-  }
-}
-
 .pricing {
   background-color: var(--secondary-color);
 }
@@ -489,15 +477,7 @@ button {
   padding: 24px;
   border: 1px solid var(--main-color);
   color: var(--main-color);
-}
-
-.package-card:hover {
-  border-color: var(--hover-color);
-}
-
-.package-card:hover .button {
-  background-color: var(--hover-color);
-  color: var(--main-color);
+  transition: border-color 0.3s ease;
 }
 
 .package-card__content {
@@ -561,11 +541,7 @@ button {
   border: 0;
   color: var(--secondary-color);
   background-color: var(--main-color);
-}
-
-.button:hover {
-  background-color: var(--hover-color);
-  color: var(--main-color);
+  transition: background-color 0.3s ease;
 }
 
 .faq__wrapper {
@@ -583,6 +559,8 @@ button {
   line-height: 1.4;
   text-transform: uppercase;
   box-shadow: inset 0 1px 0 0 var(--secondary-color);
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .accordion__item:last-child .accordion__label {
@@ -603,6 +581,7 @@ button {
   width: 15px;
   height: 1px;
   background-color: var(--secondary-color);
+  transition: color 0.3s ease;
 }
 
 .accordion__label::before {
@@ -623,16 +602,6 @@ button {
 
 .accordion__item--active .accordion__label::before {
   transform: none;
-}
-
-.accordion__label:hover {
-  color: var(--hover-color);
-  cursor: pointer;
-}
-
-.accordion__label:hover::before,
-.accordion__label:hover::after {
-  background-color: var(--hover-color);
 }
 
 .subscribe {
@@ -657,6 +626,10 @@ button {
   padding-inline: 0;
 }
 
+.form__label {
+  pointer-events: none;
+}
+
 .form__input {
   margin: 0;
   width: 100%;
@@ -668,9 +641,12 @@ button {
   text-transform: uppercase;
   border: 1px solid var(--main-color);
   color: var(--input-color);
+  transition: color 0.3s ease;
+  outline: none;
 }
 
-.form__input:hover {
+.form__input:focus,
+.form__input:active {
   border-color: var(--hover-color);
 }
 
@@ -700,11 +676,10 @@ button {
 .footer__phone {
   font-style: normal;
 }
-
-.footer__social-link:hover,
-.footer__region:hover,
-.footer__phone:hover {
-  color: var(--hover-color);
+.footer__social-link,
+.footer__region,
+.footer__phone {
+  transition: color 0.3s ease;
 }
 
 @media (max-width: 1200px) {
@@ -767,7 +742,7 @@ button {
   }
 
   .main-title {
-    font-size: 4.3rem;
+    font-size: 4.24rem;
   }
   .hero__content {
     gap: 20px;
@@ -777,8 +752,8 @@ button {
     width: 220px;
   }
 
-  .hero__stats {
-    width: 335px;
+  .slider__list {
+    transform: translateX(-1556px);
   }
 
   .pricing__list {
@@ -842,6 +817,10 @@ button {
     margin-left: auto;
   }
 
+  .slider__list {
+    transform: translateX(-1747px);
+  }
+
   .pricing__list {
     gap: 20px;
     padding: 0 10px;
@@ -867,5 +846,33 @@ button {
   .footer__links {
     flex-direction: column;
     gap: 36px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .nav__item:hover,
+  .scroll-down:hover,
+  .footer__social-link:hover,
+  .footer__region:hover,
+  .footer__phone:hover,
+  .accordion__label:hover {
+    color: var(--hover-color);
+  }
+
+  .package-card:hover,
+  .form__input:hover {
+    border-color: var(--hover-color);
+  }
+
+  .package-card:hover .button,
+  .button:hover {
+    background-color: var(--hover-color);
+    color: var(--main-color);
+  }
+
+  .accordion__label:hover::before,
+  .accordion__label:hover::after {
+    background-color: var(--hover-color);
   }
 }
