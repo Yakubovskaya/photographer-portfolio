@@ -301,7 +301,7 @@ button {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  mask: url("./icons/arrow-down.svg") center / contain no-repeat;
+  mask: url("../portfolio/icons/arrow-down.svg") center / contain no-repeat;
   background-color: currentColor;
 }
 
