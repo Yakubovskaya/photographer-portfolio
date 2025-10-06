@@ -413,14 +413,14 @@ button {
   max-width: 360px;
 }
 
-.slider__wrapper {
+.slider {
   width: 100vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
-.slider {
+.slider__wrapper {
   margin: 0 auto;
   width: 1440px;
   height: 654px;
@@ -433,6 +433,8 @@ button {
   gap: 20px;
   transform: translateX(-1220px);
   height: 100%;
+  transition: transform 0.12s linear;
+  /* overflow: hidden; */
 }
 
 .slider__item {
@@ -491,7 +493,7 @@ button {
 
 .pricing__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
   gap: 40px;
   margin-top: 40px;
 }
@@ -867,6 +869,7 @@ button {
     height: 16px;
     transform: translateY(-50%);
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
   .hamburger span {
     display: block;
