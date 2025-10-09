@@ -35,11 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     accordionHeader = document.querySelector(".accordion__label");
 
   const savedIndex = sessionStorage.getItem("activeAccordionIndex");
-  if (savedIndex !== null && accordionItems[savedIndex]) {
+  if (savedIndex === "none") {
+    accordionItems.forEach((item) =>
+      item.classList.remove("accordion__item--active")
+    );
+  } else if (savedIndex !== null && accordionItems[savedIndex]) {
     accordionItems[savedIndex].classList.add("accordion__item--active");
     accordionItems[0].classList.remove("accordion__item--active");
-  } else {
-    accordionItems[0].classList.add("accordion__item--active");
   }
 
   accordionItems.forEach((item, index) => {
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (item.classList.contains("accordion__item--active")) {
         sessionStorage.setItem("activeAccordionIndex", index);
       } else {
-        sessionStorage.removeItem("activeAccordionIndex");
+        sessionStorage.setItem("activeAccordionIndex", "none");
       }
     });
   });
@@ -151,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       direction = 0;
     }
-  }
+  };
 
   function animate() {
     if (direction !== 0) {
@@ -183,12 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function checkDevice() {
-  if (window.innerWidth <= 768) {
-    sliderWrapper.removeEventListener("mousemove", handleMouseMove);
-  } else {
-    sliderWrapper.addEventListener("mousemove", handleMouseMove);
+    if (window.innerWidth <= 768) {
+      sliderWrapper.removeEventListener("mousemove", handleMouseMove);
+    } else {
+      sliderWrapper.addEventListener("mousemove", handleMouseMove);
+    }
   }
-}
 
   window.addEventListener("resize", () => {
     calculateWidths();
