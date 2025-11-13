@@ -1,17 +1,20 @@
 # Photographer Portfolio Landing Page
 
-**Адаптивный лендинг для фотографа по макету Figma**  
+**Responsive landing page for a photographer based on the Figma design**
 
-- Полностью адаптивная верстка, оптимизированная для экранов **1440px, 768px и 380px**, без горизонтальной прокрутки и с сохранением пропорций изображений
-- **Бургер-меню** для планшетов и мобильных устройств с плавной анимацией открытия/закрытия и блокировкой скролла фона
-- **Слайдер** в разделе *Portfolio* с поддержкой навигации курсором (desktop) и свайпами (mobile)
-- **FAQ-аккордеоны** с управлением состоянием: одновременно открыт только один блок; сохранение состояния после перезагрузки сраницы с помощью *sessionStorage*
-- **Модальные окна** для кнопок *“BOOK NOW”* с затемнением фона и блокировкой прокрутки страницы
-- **Плавная прокрутка** по якорям для улучшения пользовательского опыта
-- **Hover-эффекты** на интерактивных элементах, реализованные с плавными переходами и отключенные для мобильных устройств
+- **Fully responsive layout** optimized for screens **1440px, 768px, and 380px**, no horizontal scroll, images maintain their aspect ratio  
+- **Burger menu** for tablets and mobile devices with smooth open/close animation and background scroll lock  
+- **Portfolio slider** with cursor navigation on desktop and swipe support on mobile  
+- **FAQ accordions** with state management: only one section open at a time; state persists after page reload using `sessionStorage`  
+- **Modal windows** for "BOOK NOW" buttons with background overlay and scroll lock  
+- **Smooth scrolling** for anchor links to enhance user experience  
+- **Hover effects** on interactive elements with smooth transitions, disabled on mobile devices 
 
-## Технологии
-HTML5 • CSS3 (Flexbox, Grid, Media Queries) • JavaScript (ES6+) • Git • GitHub Pages
+## Technologies
+HTML5 • CSS3 (Flexbox, Grid, Media Queries) • JavaScript (ES6+) • Git • GitHub Pages  
 
-## Деплой
-[Ссылка на сайт](https://yakubovskaya.github.io/photographer-portfolio/)
+## Deployment
+[Link](https://yakubovskaya.github.io/photographer-portfolio/)
+
+
+
