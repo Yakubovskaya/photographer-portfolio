@@ -325,7 +325,7 @@ button {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  mask: url("../portfolio/icons/arrow-down.svg") center / contain no-repeat;
+  mask: url("icons/arrow-down.svg") center / contain no-repeat;
   background-color: currentColor;
 }
 
@@ -762,7 +762,7 @@ button {
   width: 24px;
   height: 24px;
   padding: 31px;
-  background-image: url(../portfolio/icons/close-button.svg);
+  background-image: url('icons/close-button.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--secondary-color);
